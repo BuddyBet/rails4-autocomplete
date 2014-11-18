@@ -17,8 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'sqlite3-ruby'
   #s.add_development_dependency 'activerecord'
-  s.add_development_dependency 'mongoid',      '>= 2.0.0'
-  s.add_development_dependency 'mongo_mapper', '>= 0.9'
+  s.add_development_dependency 'mongoid'
   s.add_development_dependency 'mongo',        '~> 1.6.2'
   s.add_development_dependency 'bson_ext',     '~> 1.6.2'
   s.add_development_dependency 'guard'
@@ -27,11 +26,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'shoulda',      '~> 3.0.1'
   s.add_development_dependency 'uglifier'
   s.add_development_dependency 'rr'
-  s.add_development_dependency 'simple_form' #,'~>1.5'
+  s.add_development_dependency 'simple_form' ,'>= 3.1.0.rc2'
 
   s.files         = Dir['lib/**/*'] + %w{CHANGELOG.md README.md Rakefile}
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 end
-
